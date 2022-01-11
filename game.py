@@ -19,7 +19,22 @@ def update_board(player_symbol, selection, board):
     return "".join(sub_board)
      
 def check_win(player, board):
-     pass
+    wins = [
+            [1,2,3], 
+            [4,5,6],
+            [7,8,9],
+            [1,4,7],
+            [2,5,8],
+            [3,6,9],
+            [1,5,9],
+            [7,5,3],
+        ]
+
+    for win in wins:
+        if(all(x in player for x in win)):
+            return True
+
+    return False
     
 def main():
     pass
